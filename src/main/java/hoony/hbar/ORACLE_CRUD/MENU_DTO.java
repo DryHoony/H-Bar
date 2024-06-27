@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data // Lombok annotation to create all the getters, setters, equals, hash, and toString methods
+@Data // getter, setter, toString, equals, hashCode
 @NoArgsConstructor
 @AllArgsConstructor
 public class MENU_DTO {

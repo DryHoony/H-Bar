@@ -32,6 +32,7 @@ public class CRUD_Service {
         List<MENU_DTO> menus = crudRepository.findAll();
         // 출력
         System.out.println("menus = " + menus);
+        System.out.println("menu 갯수 = " + menus.size());
 
         return menus;
     }

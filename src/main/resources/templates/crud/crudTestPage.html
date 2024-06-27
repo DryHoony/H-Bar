@@ -3,10 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <style>
+        #crudTable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        #crudTable th, #crudTable td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #crudTable th {
+            background-color: #f2f2f2;
+        }
+
+        #crudTable tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #crudTable tr:hover {
+            background-color: #f5f5f5;
+        }
+
+
+    </style>
 </head>
 <body>
 
-<h1>CRUD 테스트 TryTry</h1>
+    <h1>CRUD 테스트 TryTry</h1>
+
+    <table id="crudTable">
+        <tr>
+            <th>Name</th>
+            <th>Base1</th>
+            <th>Base2</th>
+            <th>Juice1</th>
+            <th>Juice2</th>
+            <th>Juice3</th>
+            <th>Juice4</th>
+            <th>Ingredients</th>
+<!--            <th>CapacityBase1</th>-->
+<!--            <th>CapacityBase2</th>-->
+<!--            <th>CapacityJuice1</th>-->
+<!--            <th>CapacityJuice2</th>-->
+<!--            <th>CapacityJuice3</th>-->
+<!--            <th>CapacityJuice4</th>-->
+<!--            <th>CapacityIngredients</th>-->
+            <th>Method</th>
+            <th>Proof</th>
+            <th>Comments</th>
+        </tr>
+
+        <tr th:each="menu : ${menus}">
+            <td th:text="${menu.name}"></td>
+            <td th:text="${menu.base1}"></td>
+            <td th:text="${menu.base2}"></td>
+            <td th:text="${menu.juice1}"></td>
+            <td th:text="${menu.juice2}"></td>
+            <td th:text="${menu.juice3}"></td>
+            <td th:text="${menu.juice4}"></td>
+            <td th:text="${menu.ingredients}"></td>
+<!--            <td th:text="${menu.capacityBase1}"></td>-->
+<!--            <td th:text="${menu.capacityBase2}"></td>-->
+<!--            <td th:text="${menu.capacityJuice1}"></td>-->
+<!--            <td th:text="${menu.capacityJuice2}"></td>-->
+<!--            <td th:text="${menu.capacityJuice3}"></td>-->
+<!--            <td th:text="${menu.capacityJuice4}"></td>-->
+<!--            <td th:text="${menu.capacityIngredients}"></td>-->
+            <td th:text="${menu.method}"></td>
+            <td th:text="${menu.proof}"></td>
+            <td th:text="${menu.comments}"></td>
+
+
+        </tr>
+
+        <tr th:each="menu : ${menus}">
+            <td th:text="${menu.capacityBase1}"></td>
+            <td th:text="${menu.capacityBase2}"></td>
+            <td th:text="${menu.capacityJuice1}"></td>
+            <td th:text="${menu.capacityJuice2}"></td>
+            <td th:text="${menu.capacityJuice3}"></td>
+            <td th:text="${menu.capacityJuice4}"></td>
+            <td th:text="${menu.capacityIngredients}"></td>
+        </tr>
+
+    </table>
 
 </body>
 </html>
