@@ -8,10 +8,10 @@ import java.util.List;
 @Service
 public class CRUD_Service {
 
-    private final CRUD_Repository crudRepository;
+    private final CRUD_Repository2 crudRepository;
 
     @Autowired
-    public CRUD_Service(CRUD_Repository crudRepository) {
+    public CRUD_Service(CRUD_Repository2 crudRepository) {
         this.crudRepository = crudRepository;
     }
 
@@ -31,8 +31,8 @@ public class CRUD_Service {
 
         List<MENU_DTO> menus = crudRepository.findAll();
         // 출력
-        System.out.println("menus = " + menus);
-        System.out.println("menu 갯수 = " + menus.size());
+        System.out.println("Service -> readAll() -> menus = " + menus);
+        System.out.println("Service -> readAll() -> menu 갯수 = " + menus.size());
 
         return menus;
     }

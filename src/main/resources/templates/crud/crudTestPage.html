@@ -57,38 +57,31 @@
             <th>Comments</th>
         </tr>
 
-        <tr th:each="menu : ${menus}">
-            <td th:text="${menu.name}"></td>
-            <td th:text="${menu.base1}"></td>
-            <td th:text="${menu.base2}"></td>
-            <td th:text="${menu.juice1}"></td>
-            <td th:text="${menu.juice2}"></td>
-            <td th:text="${menu.juice3}"></td>
-            <td th:text="${menu.juice4}"></td>
-            <td th:text="${menu.ingredients}"></td>
-<!--            <td th:text="${menu.capacityBase1}"></td>-->
-<!--            <td th:text="${menu.capacityBase2}"></td>-->
-<!--            <td th:text="${menu.capacityJuice1}"></td>-->
-<!--            <td th:text="${menu.capacityJuice2}"></td>-->
-<!--            <td th:text="${menu.capacityJuice3}"></td>-->
-<!--            <td th:text="${menu.capacityJuice4}"></td>-->
-<!--            <td th:text="${menu.capacityIngredients}"></td>-->
-            <td th:text="${menu.method}"></td>
-            <td th:text="${menu.proof}"></td>
-            <td th:text="${menu.comments}"></td>
+        <tbody th:each="menu : ${menus}">
+            <tr>
+                <td th:text="${menu.name}"></td>
+                <td th:text="${menu.base1}"></td>
+                <td th:text="${menu.base2}"></td>
+                <td th:text="${menu.juice1}"></td>
+                <td th:text="${menu.juice2}"></td>
+                <td th:text="${menu.juice3}"></td>
+                <td th:text="${menu.juice4}"></td>
+                <td th:text="${menu.ingredients}"></td>
+                <td th:text="${menu.method}"></td>
+                <td th:text="${menu.proof}"></td>
+                <td th:text="${menu.comments}"></td>
+            </tr>
 
-
-        </tr>
-
-        <tr th:each="menu : ${menus}">
-            <td th:text="${menu.capacityBase1}"></td>
-            <td th:text="${menu.capacityBase2}"></td>
-            <td th:text="${menu.capacityJuice1}"></td>
-            <td th:text="${menu.capacityJuice2}"></td>
-            <td th:text="${menu.capacityJuice3}"></td>
-            <td th:text="${menu.capacityJuice4}"></td>
-            <td th:text="${menu.capacityIngredients}"></td>
-        </tr>
+            <tr>
+                <td th:text="${menu.capacityBase1}"></td>
+                <td th:text="${menu.capacityBase2}"></td>
+                <td th:text="${menu.capacityJuice1}"></td>
+                <td th:text="${menu.capacityJuice2}"></td>
+                <td th:text="${menu.capacityJuice3}"></td>
+                <td th:text="${menu.capacityJuice4}"></td>
+                <td th:text="${menu.capacityIngredients}"></td>
+            </tr>
+        </tbody>
 
     </table>
 

@@ -3,8 +3,10 @@ package hoony.hbar.ORACLE_CRUD;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.jdbc.datasource.DataSourceUtils;
 import org.springframework.stereotype.Repository;
 
+import javax.sql.DataSource;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +24,8 @@ public class CRUD_Repository {
         this.jdbcTemplate = jdbcTemplate;
     }
 
+
+
     // Create
     public void save(MENU_DTO menu){
 //        String sql = "INSERT INTO MENU VALUES(?, ?, ?)";
@@ -36,6 +40,11 @@ public class CRUD_Repository {
         try(Connection conn = DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD);
             PreparedStatement stmt = conn.prepareStatement(sql);
             ResultSet rs = stmt.executeQuery()){
+
+            // rs의 갯수 출력
+            ResultSetMetaData rsmd = rs.getMetaData();
+            System.out.println("Repository -> findAll() -> rs = " + rs);
+            System.out.println("Repository -> findAll() -> rsmd = " + rsmd);
 
             while (rs.next()){
                 MENU_DTO menu = new MENU_DTO();
@@ -77,5 +86,7 @@ public class CRUD_Repository {
     public void delete(MENU_DTO menu){
 
     }
+
+
 
 }
